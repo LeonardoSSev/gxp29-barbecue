@@ -29,7 +29,7 @@
 
     <main>
       <div class="container">
-        <form onsubmit="calcular()">
+        <form onsubmit="calcular(event)">
           <h3>Calculadora</h3>
           <div class="form-row">
             <div class="col-md-6 col-sm-12">
@@ -45,6 +45,16 @@
             Calcular
           </button>
         </form>
+
+        <div id="result" style="display: none;">
+          <h3>Resultado</h3>
+          <ul>
+            <li id="numComida"></li>
+            <li id="numLatinha"></li>
+            <li id="numRefri"></li>
+          </ul>
+
+        </div>
       </div>
     </main>
 
