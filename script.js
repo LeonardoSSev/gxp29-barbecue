@@ -13,7 +13,7 @@ function calcular(event) {
 function pegarValor(selector) {
   const input = document.querySelector(selector);
 
-  return input.value;
+  return parseInt(input.value);
 }
 
 function exibirValores(comida, latinha, refri) {
