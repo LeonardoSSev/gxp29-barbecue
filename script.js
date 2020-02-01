@@ -1,5 +1,12 @@
+function carregarHistorico() {
+  if (!localStorage.getItem('historico')) {
+    localStorage.setItem('historico', []);
+  }
+}
+
 function calcular(event) {
   event.preventDefault();
+
   const numPessoas = pegarValor('#people');
   const numHoras = pegarValor('#hours');
 
@@ -22,4 +29,18 @@ function exibirValores(comida, latinha, refri) {
   document.querySelector('#numRefri').innerHTML = `${refri}ml de refrigerante.`;
 
   document.querySelector('#result').style.display = 'block';
+}
+
+function adicionarHistorico(comida, latinha, refri) {
+  const churrasco = {
+    comida,
+    latinha,
+    refri,
+    date: new Date()
+  };
+
+  let historico = localStorage.getItem('historico');
+  historico.push(churrasco)
+
+  localStorage.setItem('historico', historico);
 }
