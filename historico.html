@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   </head>
-  <body>
+  <body onload="carregarHistorico()">
     <header>
       <nav class="navbar navbar-expand-lg navbar-light bg-light">        
       <a class="navbar-brand" href="/">Gama Academy</a>
@@ -17,10 +17,10 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="/">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/historico.html">Histórico</a>
+              <a class="nav-link" href="/historico.html">Histórico <span class="sr-only">(current)</span></a>
             </li>
           </ul>
         </div>
@@ -29,33 +29,7 @@
 
     <main>
       <div class="container">
-        <form onsubmit="calcular(event)">
-          <h3>Calculadora</h3>
-          <div class="form-row">
-            <div class="col-md-6 col-sm-12">
-              <label for="numPeople">Número de pessoas</label>
-              <input type="number" class="form-control" placeholder="Quantas pessoas?" name="numPeople" id="people" required>
-            </div>
-            <div class="col-md-6 col-sm-12">
-              <label for="numHours">Número de horas</label>
-              <input type="number" class="form-control" placeholder="Quantas horas?" name="numHours" id="hours" required>
-            </div>
-          </div>
-          <button class="btn btn-primary my-3" type="submit">
-            Calcular
-          </button>
-        </form>
-
-        <div id="result" style="display: none;">
-          <h3>Resultado</h3>
-          <ul>
-            <li id="numComida"></li>
-            <li id="numLatinha"></li>
-            <li id="numRefri"></li>
-          </ul>
-
-        </div>
-      </div>
+        
     </main>
 
     <footer>
